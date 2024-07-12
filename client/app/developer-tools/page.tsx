@@ -32,12 +32,68 @@ const developerTools = [
     description: "Platform for developing, shipping, and running applications in containers, ensuring consistency across different environments.",
     imageUrl: "/images/docker-icon.png",
     category: "DevOps",
+  },
+  {
+    name: "NPM",
+    title: "npm",
+    description: "The default package manager for Node.js, allowing developers to share and reuse code efficiently.",
+    imageUrl: "/images/npm-icon.png",
+    category: "Package Manager",
+  },
+  {
+    name: "Webpack",
+    title: "Webpack",
+    description: "A static module bundler for modern JavaScript applications, optimizing and packaging web assets.",
+    imageUrl: "/images/webpack-icon.png",
+    category: "Build Tool",
+  },
+  {
+    name: "GitHub",
+    title: "GitHub",
+    description: "Web-based hosting service for version control using Git, offering collaboration features for developers.",
+    imageUrl: "/images/github-icon.png",
+    category: "Collaboration",
+  },
+  {
+    name: "Jest",
+    title: "Jest",
+    description: "A delightful JavaScript testing framework with a focus on simplicity and support for large web applications.",
+    imageUrl: "/images/jest-icon.png",
+    category: "Testing",
+  },
+  {
+    name: "Postman",
+    title: "Postman",
+    description: "A popular API client that makes it easy for developers to create, share, test and document APIs.",
+    imageUrl: "/images/postman-icon.png",
+    category: "API Development",
+  },
+  {
+    name: "Babel",
+    title: "Babel",
+    description: "A JavaScript compiler that allows you to use next generation JavaScript, today.",
+    imageUrl: "/images/babel-icon.png",
+    category: "Transpiler",
+  },
+  {
+    name: "Kubernetes",
+    title: "Kubernetes",
+    description: "An open-source system for automating deployment, scaling, and management of containerized applications.",
+    imageUrl: "/images/kubernetes-icon.png",
+    category: "DevOps",
+  },
+  {
+    name: "TypeScript",
+    title: "TypeScript",
+    description: "A typed superset of JavaScript that compiles to plain JavaScript, adding optional static typing.",
+    imageUrl: "/images/typescript-icon.png",
+    category: "Language",
   }
 ];
 
 const DeveloperToolsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
+    <div className="min-h-screen bg-gray-100 p-8 relative">
       <a 
         href="/home" 
         className="fixed bottom-4 right-4 border-black bg-blue-600 hover:bg-blue-500 text-white p-2 rounded-full shadow-lg transition-all duration-300 z-10 group"
@@ -54,24 +110,26 @@ const DeveloperToolsPage = () => {
       <h1 className="text-4xl font-bold mb-8 text-center">
         <span className="text-blue-600">&lt;</span>Developer Tools<span className="text-blue-600">/&gt;</span>
       </h1>
-      <p className="text-lg text-gray-600 text-center mb-8">
+      <p className="text-lg text-gray-600 text-center mb-4">
         Build Tools -- Package Managers -- Deployment Tools
       </p>
       <p className="text-lg text-gray-600 text-center mb-8">
         IDEs -- Code Editors -- Extensions
       </p>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {developerTools.map((tool) => (
-          <ExtensionCard
-            key={tool.name}
-            name={tool.name}
-            title={tool.title}
-            description={tool.description}
-            imageUrl={tool.imageUrl}
-            category={tool.category}
-          />
-        ))}
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {developerTools.map((tool) => (
+            <ExtensionCard
+              key={tool.name}
+              name={tool.name}
+              title={tool.title}
+              description={tool.description}
+              imageUrl={tool.imageUrl}
+              category={tool.category}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -100,11 +100,10 @@ const technologies = [
     github: "https://github.com/clerkinc",
   },
 ];
-
 const AITechnologiesPage = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-8 relative">
-       <a 
+      <a 
         href="/home" 
         className="fixed bottom-4 right-4 border-black bg-blue-600 hover:bg-blue-500 text-white p-2 rounded-full shadow-lg transition-all duration-300 z-10 group"
         aria-label="Go to home page"
@@ -127,22 +126,25 @@ const AITechnologiesPage = () => {
       <p className="text-lg text-gray-600 text-center mb-8">
         LLM's -- Frameworks -- Libraries
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {technologies.map((tech, index) => (
-          <Card
-            key={`${tech.title}-${index}`}
-            title={tech.title}
-            description={tech.description}
-            imageUrl={tech.imageUrl}
-            docsText={tech.docsText}
-            tutorialText={tech.tutorialText}
-            category={tech.category}
-            website={tech.website}
-            linkedin={tech.linkedin}
-            twitter={tech.twitter}
-            github={tech.github}
-          />
-        ))}
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {technologies.map((tech, index) => (
+            <Card
+              key={`${tech.title}-${index}`}
+              title={tech.title}
+              description={tech.description}
+              imageUrl={tech.imageUrl}
+              docsText={tech.docsText}
+              tutorialText={tech.tutorialText}
+              category={tech.category}
+              website={tech.website}
+              linkedin={tech.linkedin}
+              twitter={tech.twitter}
+              github={tech.github}
+              socialColors={tech.socialColors}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
