@@ -9,7 +9,7 @@ const technologies = [
     title: "GPT-4",
     description:
       "OpenAI's most advanced language model, capable of understanding and generating human-like text with remarkable accuracy.",
-    imageUrl: "/gpt4-icon.png",
+    imageUrl: "/gpt4-icon.webp",
     docsText: "View Docs",
     tutorialText: "Start Tutorial",
     category: "LLM",
@@ -43,7 +43,7 @@ const technologies = [
     title: "Midjourney",
     description:
       "An AI-powered tool that generates images from textual descriptions, popular among artists and designers.",
-    imageUrl: "/midjourney-icon.png",
+    imageUrl: "/midjourney-icon.webp",
     docsText: "View Docs",
     tutorialText: "Start Tutorial",
     category: "Image Generation",
@@ -91,7 +91,7 @@ const technologies = [
     title: "Clerk",
     description:
       "A complete user management and authentication solution for modern applications.",
-    imageUrl: "/clerk-icon.png",
+    imageUrl: "/clerk-icon.jpeg",
     docsText: "View Docs",
     tutorialText: "Start Tutorial",
     category: "Authentication",
